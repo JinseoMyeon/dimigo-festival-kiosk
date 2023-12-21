@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 
 import Main from './pages/main';
 import Attendance from './pages/attendance';
@@ -12,6 +12,11 @@ import Done from './pages/done';
 // reset localStorage value
 
 function App() {
+  if (!localStorage.getItem('adminPassword')) {
+    const password = window.prompt("키오스크 활성화 비밀번호를 입력해 주세요.");
+    localStorage.setItem('Authorization', password);
+  }
+  
   return (
     <div className="App">
       <BrowserRouter>

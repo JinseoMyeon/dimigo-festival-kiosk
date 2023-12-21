@@ -96,6 +96,7 @@ try {
     headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
+        "Authorization": localStorage.getItem("Authorization"),
     },
   }).then((response) => response.json().then((data) => {
     return data;
@@ -170,6 +171,7 @@ export default function Items() {
         headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
+            "Authorization": localStorage.getItem("Authorization"),
         },
       }).then((response) => response.json().then((data) => {
         return data;
@@ -237,6 +239,7 @@ export default function Items() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": localStorage.getItem("Authorization"),
       },
       body: JSON.stringify(postData),
     }).then((response) => response.json().then((data) => {
@@ -273,7 +276,7 @@ export default function Items() {
         <div className="orderSelectOption">
           <img src={item0} alt="item0" className="orderSelectOptions__item0"/><br/>
           <div className="itemName">
-            <span className="itemNameText">대두 곰돌이 (6.5cm)</span><br/>
+            <span className="itemNameText">대두 곰돌이</span><br/>
             <span className="itemPrice">가격 : {item0Price}원</span><br/>
             <span className="itemCount">({items[2].count}개 남음)</span><br/>
             <SmallNumberBar id="item0Value" remain={items[2].count}/>
@@ -282,7 +285,7 @@ export default function Items() {
         <div className="orderSelectOption">
           <img src={item1} alt="item1" className="orderSelectOptions__item0"/><br/>
           <div className="itemName">
-            <span className="itemNameText">기본 곰돌이 (8cm)</span><br/>
+            <span className="itemNameText">기본 곰돌이</span><br/>
             <span className="itemPrice">가격 : {item1Price}원</span><br/>
             <span className="itemCount">({items[3].count}개 남음)</span><br/>
             <SmallNumberBar id="item1Value" remain={items[3].count}/>
@@ -291,7 +294,7 @@ export default function Items() {
         <div className="orderSelectOption">
           <img src={item2} alt="item2" className="orderSelectOptions__item0"/><br/>
           <div className="itemName">
-            <span className="itemNameText">대형 곰돌이 (18cm)</span><br/>
+            <span className="itemNameText">자이언트 곰돌이</span><br/>
             <span className="itemPrice">가격 : {item2Price}원</span><br/>
             <span className="itemCount">({items[1].count}개 남음)</span><br/>
             <SmallNumberBar id="item2Value" remain={items[1].count}/>

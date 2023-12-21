@@ -1,12 +1,7 @@
 import Header from "../components/header";
 import Items from "../components/items";
 
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-
 export default function Order() {
-  const navigate = useNavigate();
-
   const navigatePrevPage = () => {
     window.location.replace("/time");
   }

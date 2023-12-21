@@ -2,7 +2,6 @@ import '../styles/pages/payment.scss';
 
 import Header from "../components/header";
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 export default function Payment() {
   const navigate = useNavigate();

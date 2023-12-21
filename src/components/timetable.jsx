@@ -18,6 +18,7 @@ try {
     headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
+        "Authorization": localStorage.getItem("Authorization"),
     },
   }).then((response) => response.json().then((data) => {
     return data;
@@ -67,6 +68,7 @@ function CheckAvailableButton(max, now, i) {
               headers: {
                   "Content-Type": "application/json",
                   "Access-Control-Allow-Origin": "*",
+                  "Authorization": localStorage.getItem("Authorization"),
               },
             }).then((response) => response.json().then((data) => {
               return data;
