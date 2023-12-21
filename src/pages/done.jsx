@@ -7,10 +7,10 @@ export default function Done() {
   const navigate = useNavigate();
   const money = localStorage.getItem("money") || 0;
   const reservationTime = localStorage.getItem("reservation_time");
-  const bighead = localStorage.setItem("bighead", "");
-  const medium = localStorage.setItem("medium", "");
-  const big = localStorage.setItem("big", "");
-  const apchima = localStorage.setItem("apchima", "");
+  const bighead = localStorage.getItem("bighead");
+  const medium = localStorage.getItem("medium", "");
+  const big = localStorage.getItem("big", "");
+  const apchima = localStorage.getItem("apchima", "");
 
   const checkItems = () => {
     let returnitems = [];
