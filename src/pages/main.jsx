@@ -10,6 +10,11 @@ export default function Main() {
     navigate("/attendance");
   };
 
+  if (localStorage.getItem('Authorization')) {
+    const password = window.prompt("키오스크 활성화 비밀번호를 입력해 주세요.");
+    localStorage.setItem('Authorization', password);
+  }
+
   return (
     <div className="MainPage">
         <div className="mainLogoImage">
