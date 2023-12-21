@@ -3,6 +3,7 @@ import '../styles/components/button.scss';
 import EventSeatOutlinedIcon from '@mui/icons-material/EventSeatOutlined';
 import AlarmRoundedIcon from '@mui/icons-material/AlarmRounded';
 import CreditScoreRoundedIcon from '@mui/icons-material/CreditScoreRounded';
+import RestartAltRoundedIcon from '@mui/icons-material/RestartAltRounded';
 
 export default function Button(props) {
   const text = props.text || "클릭하기";
@@ -18,6 +19,8 @@ export default function Button(props) {
             return <AlarmRoundedIcon className={`buttonIcon`} htmlColor="#FFFFFF"/>;
         case "CreditScoreRoundedIcon":
             return <CreditScoreRoundedIcon className={`buttonIcon`} htmlColor="#FFFFFF"/>;
+        case "RestartAltRoundedIcon":
+            return <RestartAltRoundedIcon className={`buttonIcon`} htmlColor="#FFFFFF"/>;
         default:
             return <></>
     }

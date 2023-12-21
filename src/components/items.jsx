@@ -49,7 +49,8 @@ const waitForPaymentConfirm = (url, id, callback) => {
 
       ws.send(JSON.stringify({
           'method': 'change_protocol',
-          'type': 'ticket'
+          'type': 'ticket',
+          'authorization': localStorage.getItem('Authorization')
       }));
   }
 
