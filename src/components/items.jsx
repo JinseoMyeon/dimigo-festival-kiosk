@@ -241,7 +241,7 @@ export default function Items() {
     }).then((response) => response.json().then((data) => {
       if (data.ok !== true) {
         alert('이미 선택된 시간입니다. 다른 시간을 선택해 주세요.');
-        navigate("/time");
+        return navigate("/time");
       }
       return data;
     }))
