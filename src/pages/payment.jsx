@@ -33,7 +33,7 @@ export default function Payment() {
 
   return (
     <div>
-      <Header title="결제하기" backNavigate={navigatePrevPage} />
+      <Header title="결제하기" backText="뒤로가기 불가" />
       <div className='Body'>
         <div className='orderRecall'>
           <span className="orderInfo">결제 완료 후 카운터에 송금 내역을 보내주세요.</span>
