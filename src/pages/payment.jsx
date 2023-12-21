@@ -11,8 +11,8 @@ export default function Payment() {
     navigate("/order");
   }
 
-  const navigateMainPage = () => {
-    navigate("/");
+  async function getTicketId() {
+    return localStorage.getItem("ticketId");
   }
 
   const checkItems = () => {
@@ -36,6 +36,7 @@ export default function Payment() {
       <Header title="결제하기" backNavigate={navigatePrevPage} />
       <div className='Body'>
         <div className='orderRecall'>
+          <span className="orderInfo">결제 완료 후 카운터에 송금 내역을 보내주세요.</span>
           <div className='orderRecall__title'>
             <span className="orderRecall__titleText">결제 금액</span><br/>
             <span className="orderRecall__money">{money}원</span>

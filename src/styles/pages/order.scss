@@ -26,14 +26,48 @@
 .itemPrice {
   margin-top:-16px;
   width: 180px;
+  font-size: 18px;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #9099a6;
+  color: #5f666d;
 }
 
 .itemCount {
   margin-top:-16px;
   color: #E83C77;
+}
+
+.OptionTextSubtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #5F666D;
+  line-height: 150%;
+}
+
+.orderSelectOptions__item0 {
+  width: 180px;
+}
+
+.orderSelectOptions__item1 {
+  width: 180px;
+}
+
+.orderSelectOptions__item2 {
+  width: 180px;
+}
+
+.orderInfo {
+  position: fixed;
+  top: 200px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #2E3438;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  width: 100vw;
 }

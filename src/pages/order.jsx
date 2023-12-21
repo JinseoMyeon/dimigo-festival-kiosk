@@ -8,7 +8,7 @@ export default function Order() {
   const navigate = useNavigate();
 
   const navigatePrevPage = () => {
-    navigate("/time");
+    window.location.replace("/time");
   }
   
   const count = localStorage.getItem("count");

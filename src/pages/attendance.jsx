@@ -47,7 +47,7 @@ export default function Attendance() {
       localStorage.setItem("name", document.getElementById("StudentName").value);
       localStorage.setItem("phone", document.getElementById("PhoneNumber").value);
       localStorage.setItem("count", document.getElementById("AttendanceNumber").innerText);
-      navigate("/time");
+      window.location.replace("/time");
     } 
   };
 

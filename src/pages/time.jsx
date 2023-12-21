@@ -15,7 +15,6 @@ export default function Time() {
   const count = localStorage.getItem("count");
 
   return (
-    
     <div>
       <Header title="참가 시간 선택" backNavigate={navigatePrevPage}/>
       <div className='Body'>
