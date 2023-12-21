@@ -1,6 +1,6 @@
-import item0 from '../svgs/item0.svg';
-import item1 from '../svgs/item1.svg';
-import item2 from '../svgs/item2.svg';
+import item0 from '../images/bighead.png';
+import item1 from '../images/medium.png';
+import item2 from '../images/big.png';
 import '../styles/pages/order.scss';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -106,10 +106,10 @@ try {
 
 const items = fetchData.items || [];
 
-const item0Price = 4500;
-const item1Price = 4500;
-const item2Price = 5500;
-const apronPrice = 500;
+const item0Price = 3600;
+const item1Price = 3800;
+const item2Price = 6000;
+const apronPrice = 300;
 
 // 2 : 대두 / 3 : 일반 / 1 : 대형 / 0 : 앞치마
 
@@ -129,12 +129,12 @@ export default function Items() {
 
   const navigate = useNavigate();
 
-  const navigateDonePage = () => {
-    navigate("/done");
-  }
-
   const navigateMainPage = () => {
     navigate("/");
+  }
+
+  const navigateDonePage = () => {
+    navigate("/done");
   }
 
   const navigateNextPage = async () => {
@@ -226,6 +226,8 @@ export default function Items() {
       phone: phone
     };
 
+    let flag = 0;
+
     let requestPayment = {
       ticket_id: -1
     };
@@ -239,29 +241,31 @@ export default function Items() {
       },
       body: JSON.stringify(postData),
     }).then((response) => response.json().then((data) => {
-      if (data.ok !== true) {
-        alert('이미 선택된 시간입니다. 다른 시간을 선택해 주세요.');
-        return navigate("/time");
+      if (data.ok === false) {
+        alert('이미 마감된 시간입니다. 다른 시간을 선택해 주세요.');
+        return window.location.replace("/time");
+      }
+      else {
+        flag = 1;
       }
       return data;
-    }))
+    }));
 
-    const ticketId = requestPayment.ticket_id;
-    console.log(ticketId);
+    if (flag === 1) {
 
-    waitForPaymentConfirm('ws://121.124.49.48:6003', ticketId, (result) => {
-      if(result === undefined) {
-          alert('결제 과정에서 오류가 발생했습니다.');
-          navigateMainPage();
-      } else if(result === false) {
-          alert('결제가 취소되었습니다.');
-          navigateMainPage();
-      } else {
-          navigateDonePage();
-      }
-    });
-
-    navigate("/payment");
+      waitForPaymentConfirm('ws://121.124.49.48:6003', requestPayment.ticket_id, (result) => {
+        if(result === undefined) {
+            alert('결제 과정에서 오류가 발생했습니다.');
+            navigateMainPage();
+        } else if(result === false) {
+            alert('결제가 취소되었습니다.');
+            navigateMainPage();
+        } else {
+            navigateDonePage();
+        }
+        });
+      navigate("/payment");
+    }
   }  
 
   return(
@@ -270,7 +274,7 @@ export default function Items() {
         <div className="orderSelectOption">
           <img src={item0} alt="item0" className="orderSelectOptions__item0"/><br/>
           <div className="itemName">
-            <span className="itemNameText">대두 곰돌이 키링</span><br/>
+            <span className="itemNameText">대두 곰돌이 (6.5cm)</span><br/>
             <span className="itemPrice">가격 : {item0Price}원</span><br/>
             <span className="itemCount">({items[2].count}개 남음)</span><br/>
             <SmallNumberBar id="item0Value" remain={items[2].count}/>
@@ -279,7 +283,7 @@ export default function Items() {
         <div className="orderSelectOption">
           <img src={item1} alt="item1" className="orderSelectOptions__item0"/><br/>
           <div className="itemName">
-            <span className="itemNameText">곰돌이 키링</span><br/>
+            <span className="itemNameText">기본 곰돌이 (8cm)</span><br/>
             <span className="itemPrice">가격 : {item1Price}원</span><br/>
             <span className="itemCount">({items[3].count}개 남음)</span><br/>
             <SmallNumberBar id="item1Value" remain={items[3].count}/>
@@ -288,7 +292,7 @@ export default function Items() {
         <div className="orderSelectOption">
           <img src={item2} alt="item2" className="orderSelectOptions__item0"/><br/>
           <div className="itemName">
-            <span className="itemNameText">대형 곰돌이</span><br/>
+            <span className="itemNameText">대형 곰돌이 (18cm)</span><br/>
             <span className="itemPrice">가격 : {item2Price}원</span><br/>
             <span className="itemCount">({items[1].count}개 남음)</span><br/>
             <SmallNumberBar id="item2Value" remain={items[1].count}/>
@@ -297,6 +301,7 @@ export default function Items() {
       </div>
       <div className="InputBar">
         <span className="OptionTextTitle">앞치마</span><br/>
+        <span className="OptionTextSubtitle">가격 : {apronPrice}원</span><br/>
         <span className="OptionTextDesc">푸어링 아트 과정에서 물감이 튈 수 있어요.</span>
         <div className="numberBar">
           <ChevronLeftRoundedIcon fontSize="large" className='numberBar__leftIcon' onClick={decreaseValue}/>
