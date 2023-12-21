@@ -33,7 +33,7 @@ export default function Done() {
         {checkItems()}
         <span className="purchaseList">결제 금액</span><br/>
         <span className="purchaseMoney">{money}원</span><br/>
-        <Button className="DonePageButton" text="처음으로" onClick={() => {
+        <Button className="DonePageButton" text="처음으로" icon="RestartAltRoundedIcon" onClick={() => {
           navigate("/");
         }}/><br/>
         <div className="Infos">

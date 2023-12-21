@@ -7,7 +7,7 @@ export default function NumberBar(props) {
   const [ value, setValue ] = useState(1);
   const id = props.id || "";
 
-  const MAX_VALUE = 5;
+  const MAX_VALUE = 2;
   
   const increaseValue = () => {
     if (value < MAX_VALUE) setValue(value + 1);

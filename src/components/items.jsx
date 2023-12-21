@@ -303,7 +303,7 @@ export default function Items() {
         </div>
       </div>
       <div className="InputBar">
-        <span className="OptionTextTitle">앞치마</span><br/>
+        <span className="OptionTextTitle">앞치마 + 팔토시</span><br/>
         <span className="OptionTextSubtitle">가격 : {apronPrice}원</span><br/>
         <span className="OptionTextDesc">푸어링 아트 과정에서 물감이 튈 수 있어요.</span>
         <div className="numberBar">
