@@ -1,0 +1,19 @@
+@import '../index.scss';
+
+.inputbar {
+  width: 60vw;
+  padding: 18px 28px;
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Wanted Sans Variable";
+  border: 1px solid #C6CFD7;
+  color: #42464a;
+  outline: none;
+  margin-top: 20px;
+}
+
+.inputbar::placeholder {
+  color: #9099A6;
+  font-weight: 400;
+}

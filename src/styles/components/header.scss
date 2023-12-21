@@ -1,0 +1,53 @@
+@import '../index.scss';
+
+.headerBar {
+  position: fixed;
+  width: 100vw;
+  height: 78px;
+  background-color: #f2f5f8;
+}
+
+.title_text {
+  position: fixed;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2e3438;
+  margin-top: 48px;
+  text-align: center;
+  width: 100vw;
+  left: 0;
+  z-index: -100;
+}
+
+.goBack {
+  position: fixed;
+
+  .headerBackIcon {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    margin-top: 48px;
+    margin-left: 36px;
+    color: #9099A6;
+  }
+
+  .headerBackText {
+    position: fixed;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9099a6;
+    margin-top: 48px;
+    margin-left: 60px;
+  }
+}
+
+.goBack2 {
+  position: fixed;
+
+    position: fixed;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9099a6;
+    margin-top: 48px;
+    right: 60px;
+}

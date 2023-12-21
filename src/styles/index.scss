@@ -1,0 +1,41 @@
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
+
+$color : (
+  0 : #fff,
+  100 : #f2f5f8,
+  200 : #e2e7ec,
+  300 : #c6cfd7,
+  400 : #9099a6,
+  500 : #5f666d,
+  600 : #42464A,
+  700 : #2e3438,
+  800 : #20262b,
+  900 : #181d21,
+);
+
+body {
+  margin: 0;
+  font-family: "Wanted Sans Variable", "Wanted Sans", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02rem;
+  font-weight: 400;
+  background-color: #f2f5f8;
+  overflow: hidden;
+  // user drag 방지
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+  overscroll-behavior-y: none;
+}
+
+html {
+  overscroll-behavior-y: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

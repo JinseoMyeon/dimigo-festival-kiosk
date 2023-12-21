@@ -1,0 +1,31 @@
+.Body {
+  position: absolute;
+  margin-top: 72px;
+  width: 70vw;
+  height: 88vh;
+  z-index: -200;
+  text-align: left;
+  padding-inline: 15vw;
+}
+
+.topInputBar {
+  margin-top: 120px;
+}
+
+.InputBar {
+  margin-top: 100px;
+}
+
+.OptionTextTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #42464A;
+  line-height: 150%;
+}
+
+.OptionTextDesc {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #9099a6 !important;
+  line-height: 150%;
+}

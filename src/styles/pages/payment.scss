@@ -1,0 +1,40 @@
+.orderRecall {
+  margin-top: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 16vw;
+  .orderRecall__title {
+    .orderRecall__titleText {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #42464A;
+      line-height: 150%;
+    }
+
+    .orderRecall__money {
+      font-size: 36px;
+      font-weight: 600;
+      color: #2E3438;
+      line-height: 150%;
+    }
+  }
+
+  .orderRecall_contentText {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9099a6;
+    line-height: 60%;
+  }
+}
+
+.orderPayment {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.orderQR {
+  mix-blend-mode: color-burn;
+  border-radius: 30px;
+}

@@ -1,0 +1,45 @@
+.button {
+  background: linear-gradient(90deg, #EC008C 0%, #FC6767 100%);
+  border-radius: 100px;
+  color: #fff;
+
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 20px 36px;
+  gap: 8px;
+  text-align: center;
+  border: 0px;
+  transition: all 0.1s ease-in-out;
+}
+.button:active {
+  // background: linear-gradient(90deg, #dc0b88 0%, #e35a5a 100%);
+  transform: scale(0.95);
+  transition: all 0.1s ease-in-out;
+}
+
+.smallbutton {
+  background: linear-gradient(90deg, #EC008C 0%, #FC6767 100%);
+  border-radius: 100px;
+  color: #fff;
+
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 12px 24px;
+  gap: 8px;
+  text-align: center;
+  border: 0px;
+  transition: all 0.1s ease-in-out;
+}
+.smallbutton:active {
+  // background: linear-gradient(90deg, #dc0b88 0%, #e35a5a 100%);
+  transform: scale(0.95);
+  transition: all 0.1s ease-in-out;
+}

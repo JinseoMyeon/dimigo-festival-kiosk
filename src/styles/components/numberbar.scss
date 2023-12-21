@@ -1,0 +1,62 @@
+.numberBar {
+  margin-top: 16px;
+
+  .numberBar__leftIcon {
+    color: #9099a6;
+  }
+
+  .numberBar__rightIcon {
+    color: #9099a6;
+  }
+
+  .numberBar__leftIcon:active .numberBar__rightIcon:active {
+    color: #5f666d;
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+  }
+
+  .numberBar__value {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 500;
+    margin-inline: 2rem;
+    width: 24px !important;
+    resize: none;
+    text-align: center;
+    color: #42464A;
+  }
+}
+
+.smallNumberBar {
+
+  .smallNumberBar__leftIcon {
+    color: #9099a6;
+  }
+
+  .smallNumberBar__rightIcon {
+    color: #9099a6;
+  }
+
+  .smallNumberBar__leftIcon:active .numberBar__rightIcon:active {
+    color: #5f666d;
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
+  }
+
+  .smallNumberBar__value {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 500;
+    margin-inline: 1.5rem;
+    width: 24px !important;
+    resize: none;
+    text-align: center;
+    color: #42464A;
+  }
+}
+
+.paymentButton {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
