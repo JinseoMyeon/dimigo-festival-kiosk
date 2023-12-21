@@ -94,7 +94,6 @@ function CheckAvailableButton(max, now, i) {
 }
 
 export default function TimeTable() {
-  const navigate = useNavigate();
   return (
     <div className="overflowScroll">
       {Array(lenTimes).fill().map((_, i) => {

@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
 
 import Main from './pages/main';
 import Attendance from './pages/attendance';

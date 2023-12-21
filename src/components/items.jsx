@@ -2,7 +2,7 @@ import item0 from '../images/bighead.png';
 import item1 from '../images/medium.png';
 import item2 from '../images/big.png';
 import '../styles/pages/order.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';

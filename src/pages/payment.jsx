@@ -1,18 +1,8 @@
 import '../styles/pages/payment.scss';
 
 import Header from "../components/header";
-import { useNavigate } from 'react-router-dom';
 
 export default function Payment() {
-  const navigate = useNavigate();
-
-  const navigatePrevPage = () => {
-    navigate("/order");
-  }
-
-  async function getTicketId() {
-    return localStorage.getItem("ticketId");
-  }
 
   const checkItems = () => {
     let returnitems = [];
