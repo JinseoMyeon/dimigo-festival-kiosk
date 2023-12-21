@@ -190,7 +190,6 @@ export default function Items() {
     localStorage.setItem("big", item2Value);
     localStorage.setItem("apchima", value)
 
-    console.log(item0Value, item1Value, item2Value, value, apronPrice, item0Price, item1Price, item2Price)
     const money = item0Value * item0Price + item1Value * item1Price + item2Value * item2Price + value * apronPrice;
     console.log(money);
     localStorage.setItem("money", money);
